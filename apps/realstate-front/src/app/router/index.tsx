@@ -10,8 +10,6 @@ import SendCode from '../pages/SendCode';
 import VerifyCode from '../pages/VerifyCode';
 import Dashboard from '../pages/Dashboard';
 
-// import NotFound from '../pages/NotFound';
-
 const RouterComponent = (): JSX.Element => {
   return (
     <Routes>
@@ -56,9 +54,14 @@ const RouterComponent = (): JSX.Element => {
         }
       />
       <Route path="/dashboard" element={<Dashboard />} />
-
-      {/* GENERAL */}
-      {/* <Route path="*" element={<NotFound />} /> */}
+      <Route
+        path="*"
+        element={
+          <LayoutAuth>
+            <SignIn />
+          </LayoutAuth>
+        }
+      />
     </Routes>
   );
 };

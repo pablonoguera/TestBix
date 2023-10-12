@@ -22,7 +22,7 @@ const SignIn = () => {
           <VStack spacing={4}>
             <Input label="Email" placeholder="example@gmail.com" />
             <Input label="Password" type="password" />
-            <Box w='100%' textAlign="right">
+            <Box w="100%" textAlign="right">
               <Link text="Forgot password?" small to="send-code" />
             </Box>
           </VStack>
