@@ -1,8 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-
 import LayoutAuth from '../Layouts/Auth';
 import LayoutRecovery from '../Layouts/Recovery';
-
 import SignIn from '../pages/SignIn';
 import CreateAccount from '../pages/CreateAccount';
 import NewPassword from '../pages/NewPassword';

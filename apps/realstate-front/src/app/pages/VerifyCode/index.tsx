@@ -2,7 +2,6 @@ import PinInput from '../../components/atoms/PinInput';
 import Button from '../../components/atoms/Button';
 import Heading from '../../components/atoms/Heading';
 import IconButton from '../../components/atoms/IconButton';
-import * as S from './styles';
 import { VStack, Box, Text } from '@chakra-ui/react';
 import arrowBack from '../../assets/icons/arrow-back-60.png';
 import { useNavigate } from 'react-router-dom';
@@ -15,11 +14,11 @@ const VerifyCode = () => {
   };
 
   const handleSend = () => {
-    navigate("/new-password");
+    navigate('/new-password');
   };
 
   return (
-    <S.Container>
+    <Box flex={1}>
       <Box mb={'32px'}>
         <IconButton
           onClick={handleGoBack}
@@ -49,13 +48,15 @@ const VerifyCode = () => {
 
           <Box textAlign="center">
             Didn't receive OTP? <br />
-            <Text as="u"><strong>Resend code</strong></Text>
+            <Text as="u">
+              <strong>Resend code</strong>
+            </Text>
           </Box>
 
           <Button label="Verify" onClick={handleSend} />
         </VStack>
       </main>
-    </S.Container>
+    </Box>
   );
 };
 

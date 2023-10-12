@@ -4,13 +4,11 @@ import Button from '../../components/atoms/Button';
 import Link from '../../components/atoms/Link';
 import Heading from '../../components/atoms/Heading';
 import SocialLogin from '../../components/molecules/SocialLogin';
-import * as S from './styles';
-
 import { VStack, Text, Box } from '@chakra-ui/react';
 
 const SignIn = () => {
   return (
-    <S.Container>
+    <Box flex={1}>
       <Heading
         title="Sign in"
         subtitle={"Hi! Welcome back, you've been missed"}
@@ -40,7 +38,7 @@ const SignIn = () => {
           </Text>
         </VStack>
       </main>
-    </S.Container>
+    </Box>
   );
 };
 

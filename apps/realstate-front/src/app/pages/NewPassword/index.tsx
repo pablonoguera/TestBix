@@ -2,7 +2,6 @@ import Input from '../../components/atoms/Input';
 import Button from '../../components/atoms/Button';
 import Heading from '../../components/atoms/Heading';
 import IconButton from '../../components/atoms/IconButton';
-import * as S from './styles';
 import { VStack, Box } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +19,7 @@ const NewPassword = () => {
   };
 
   return (
-    <S.Container>
+    <Box flex={1}>
       <Box mb={'32px'}>
         <IconButton
           onClick={handleGoBack}
@@ -52,7 +51,7 @@ const NewPassword = () => {
           <Button label="Create New Password" onClick={handleSend} />
         </VStack>
       </main>
-    </S.Container>
+    </Box>
   );
 };
 

@@ -5,17 +5,21 @@ import Link from '../../components/atoms/Link';
 import Heading from '../../components/atoms/Heading';
 import SocialLogin from '../../components/molecules/SocialLogin';
 import CheckBox from '../../components/atoms/CheckBox';
-import * as S from './styles';
 
 import { VStack, HStack, Text, Box } from '@chakra-ui/react';
 
 const CreateAccount = () => {
   return (
-    <S.Container>
+    <Box flex={1}>
       <Heading
         title="Create Account"
-        subtitle={<>Fill your information below or register <br /> with your social account</>}
-        mb={"28px"}
+        subtitle={
+          <>
+            Fill your information below or register <br /> with your social
+            account
+          </>
+        }
+        mb={'28px'}
       />
 
       <main>
@@ -24,8 +28,9 @@ const CreateAccount = () => {
             <Input label="Name" placeholder="John Doe" />
             <Input label="Email" placeholder="example@gmail.com" />
             <Input label="Password" type="password" />
-            <HStack w='100%'>
-              <CheckBox text="Agree width" /> <Link text="Terms & Condition" small to="#" />
+            <HStack w="100%">
+              <CheckBox text="Agree width" />{' '}
+              <Link text="Terms & Condition" small to="#" />
             </HStack>
           </VStack>
 
@@ -42,7 +47,7 @@ const CreateAccount = () => {
           </Text>
         </VStack>
       </main>
-    </S.Container>
+    </Box>
   );
 };
 
