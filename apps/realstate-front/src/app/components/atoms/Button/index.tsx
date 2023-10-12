@@ -13,7 +13,7 @@ function Button({ label, onClick, isDisabled, isLoading, ...rest } : IButton): J
     <ChakraButton
       size="lg"
       height={47}
-      backgroundColor="#246BFD"
+      backgroundColor={isDisabled ? "#a4c2ff" : "#246BFD"}
       colorScheme="blue"
       borderRadius={30}
       width="100%"
@@ -22,6 +22,8 @@ function Button({ label, onClick, isDisabled, isLoading, ...rest } : IButton): J
       disabled={isDisabled}
       isLoading={isLoading}
       fontSize={16}
+      color={"white"}
+      border="none"
       {...rest}
     >
       {label}
